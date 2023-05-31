@@ -3,12 +3,14 @@ const feedbacks = document.querySelectorAll('.invalid-feedback');
 const button = document.querySelector('#sendButton');
 const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
+//função para adicionar e remover a classe is-invalid
 function markAsInvalid(input) {
   input.classList.add('is-invalid');
   input.classList.remove('is-valid');
   input.focus();
 }
 
+//função para adicionar e remover a classe is-valid
 function markAsValid(input) {
   input.classList.add('is-valid');
   input.classList.remove('is-invalid');
@@ -44,3 +46,8 @@ button.addEventListener('click', (e) => {
     document.querySelector('#form').submit();
   }
 });
+
+
+
+
+
